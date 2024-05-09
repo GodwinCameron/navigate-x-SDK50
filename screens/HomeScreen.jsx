@@ -1,10 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import * as React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native'
 
-function HomeScreen(){
+
+function HomeScreen({ navigation }){
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home</Text>
+      <Button
+        title="Go to Development"
+        onPress={() => navigation.navigate('Development')}
+      />
+      <Button
+        title="Go to Photo Screen"
+        onPress={() => navigation.navigate('PhotosScreen')}
+      />
+      <Button
+        title="Go to Private Screen"
+        onPress={() => navigation.navigate('PrivateScreen')}
+      />
     </View>
   )
 }
@@ -24,3 +37,6 @@ const styles = StyleSheet.create({
       color: "#ECEDEE"
   }
 })
+
+
+
